@@ -4,13 +4,12 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\FormModel as Authenticatable;
+// use Illuminate\Foundation\Auth\FormModel as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-// use Illuminate\Database\Eloquent\Model;
-
-class FormModel extends Authenticatable
+class FormModel extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
     
