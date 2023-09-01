@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Models;
+namespace App\Models; // Change this namespace to match the location of your FormModel class
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-// use Illuminate\Foundation\Auth\FormModel as Authenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class FormModel extends Model
+class FormModel extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     
@@ -26,26 +25,5 @@ class FormModel extends Model
         'dob'
     ];
 
-    protected $table = 'form_model';
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
-
+    protected $table = 'form_model'; // Make sure your table name is correct
 }

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="form-style">
+    <div class="form-style bg-gray-300">
         <h2 class="text-3xl mb-7 font-bold underline">Login Form</h2>
         
         <form class="form-align" method="POST" action="{{ route('login') }}" novalidate>

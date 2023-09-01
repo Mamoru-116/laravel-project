@@ -1,5 +1,5 @@
 <x-app-layout>
-  <div class="form-style">
+  <div class="form-style bg-gray-300">
     <h2 class="text-3xl font-bold underline mb-7">Register Form</h2>
     @if (Session::has('success'))
       <div class="alert alert-success" role="alert">

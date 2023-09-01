@@ -7,7 +7,7 @@
         @vite('resources/css/app.css')
         <title>Form</title>
     </head>
-    <body class="antialiased bg-gray-300">
+    <body class="antialiased">
         {{ $slot }}
     </body>
 </html>
